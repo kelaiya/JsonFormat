@@ -14,3 +14,6 @@ JSON Format is a python function which will take a file as an input. That file w
 
 ## Start
 * python ./firstPython.py
+
+## Test
+* python -m unittest test_data.TestData

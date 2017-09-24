@@ -2,9 +2,9 @@ import json
 
 def jsonOutput(data):
 
-  # solution can also be seen on: https://github.com/kelaiya/JsonFormat
+  # solution can be seen on: https://github.com/kelaiya/JsonFormat
+  
   # obj is python object storing the data 
-
   obj = {}
   f = open(data, "r")
 
@@ -33,7 +33,7 @@ def checkData(arr):
   entry = []
   mistake = []
 
-  # there are 3 types of format which are valid so there are 3 if conditions in the loop
+  # there are 3 types of format which are valid so there are 3 if conditions to check the string and if the string length is less than 4 then consider it as invalid string in the loop
   for i in range(len(arr)):
     dataInfo = arr[i].split(', ')
     

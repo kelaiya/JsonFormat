@@ -8,6 +8,8 @@ ans1 = '{\n  "entries": [\n    {\n      "color": "yellow", \n      "firstname": 
 
 ans2 = '{\n  "entries": [\n    {\n      "color": "blue", \n      "firstname": "Maurita", \n      "lastname": "Awong", \n      "phonenumber": "061 937 1243", \n      "zipcode": "15726"\n    }, \n    {\n      "color": "red", \n      "firstname": "Englebert", \n      "lastname": "G.", \n      "phonenumber": "839 014 8051", \n      "zipcode": "36410"\n    }\n  ], \n  "errors": [\n    0\n  ]\n}'
 
+ans3 = '{\n  "entries": [\n    {\n      "color": "pink", \n      "firstname": "Shela", \n      "lastname": "Mona", \n      "phonenumber": "986 283 6066", \n      "zipcode": "11198"\n    }\n  ], \n  "errors": [\n    0, \n    1, \n    3, \n    4\n  ]\n}'
+
 class TestData(unittest.TestCase):
 
 	def test_data1(self):
@@ -17,3 +19,7 @@ class TestData(unittest.TestCase):
 	def test_data2(self):
 		result = firstPython.jsonOutput('dummy2.in')
 		self.assertEqual(result, ans2)
+
+	def test_data3(self):
+		result = firstPython.jsonOutput('dummy3.in')
+		self.assertEqual(result, ans3)

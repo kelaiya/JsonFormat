@@ -6,15 +6,17 @@ def jsonOutput(data):
   
   # obj is python object storing the data 
   obj = {}
+  
   f = open(data, "r")
 
   # arr is the array of strings
   arr = f.read().split('\n')
   
-  # obj will have 2 key-value pairs. One will be "entries" and other will be "errors"
+  # obj will have 2 key-value pairs. One key will be "entries" and other will be "errors"
   # checkData is a function which will check data and return the data in two groups
-  # if the data is valid, it will go to entries section of obj and if it is invalid, it will go to errors section of obj 
+  # if the data is valid, it will go to "entries" key of obj and if it is invalid, it will go to "errors" key of obj 
   [obj["entries"], obj["errors"]] = checkData(arr)
+  
   f.close()
 
   # stored_obj is an object stored by lastname
@@ -57,6 +59,7 @@ def checkData(arr):
       mistake.append(i)
 
   return [entry, mistake] 
+
 
 
 print(jsonOutput('data.in'))

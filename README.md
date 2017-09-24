@@ -8,7 +8,7 @@ JSON Format is a python function which will take a file as an input. That file w
 * The output will also be sorted by people's lastname and the keys are sorted by ascending order.
 * There is also a unit test included with the solution.
 
-## Madee With
+## Made With
 * Python
 * Json module
 

@@ -1,11 +1,21 @@
 import json
 
 def jsonOutput(data):
+
+  # entry list is for entries array in json format 
+  # mistake list is for errors list in json format
+  # obj is python object storing the data 
+
   entry = []
   mistake = []
   obj = {}
   f = open(data, "r")
+
+  # arr is the array of strings
+
   arr = f.read().split('\n')
+
+  # there are 3 types of format which are valid so there are 3 if conditions in the loop
 
   for i in range(len(arr)):
     crr = arr[i].split(', ')
@@ -24,8 +34,14 @@ def jsonOutput(data):
   obj["entries"] = entry
   obj["errors"] = mistake
   f.close()
+
+  # stored_obj is an object stored by lastname
+
   sorted_obj = dict(obj) 
   sorted_obj["entries"] = sorted(obj['entries'], key=lambda x: x['lastName'], reverse=False) 
+
+  # jsonAns is the Json format of that object
+  
   jsonAns = json.dumps(sorted_obj, sort_keys=True, skipkeys=False, indent=2)
   return jsonAns
 
